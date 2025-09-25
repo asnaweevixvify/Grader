@@ -1,19 +1,8 @@
 def strength(passwords):
     arr = []
     for word in passwords:
-        if(len(word) >=12):
-            isAlpha = False
-            isNum = False
-            isSym = False
-            for j in word:
-                if(j.isalpha()):
-                    isAlpha = True
-                elif(j.isdigit()):
-                    isNum = True
-                elif(not(j.isalnum())):
-                    isSym = True
-            if(isAlpha and isNum and isSym):
-                arr.append("strong")
+        if(len(word)>=12 and any(s.isalpha() for s in word) and any(s.isdigit() for s in word) and (any(not s.isalnum() for s in word))):
+            arr.append("strong")
         elif(len(word) < 8 or word.isalpha()):
             arr.append("weak")
         else:
