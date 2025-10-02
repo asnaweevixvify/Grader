@@ -17,7 +17,8 @@ def search_books(books, keyword):
     if(isFind == []):
         print("ไม่พบรายการ")
         return 
-    return isFind
+    for i in isFind:
+        print(i)
     
 def search_books_all(books):
     for i in books:
@@ -31,8 +32,8 @@ add_book(books_list, '005', 'Introduction to Algorithms', 'Cormen et al.', 2)
 add_book(books_list, '006', 'Code Complete', 'Steve McConnell', 3)
 add_book(books_list, '007', 'Refactoring', 'Martin Fowler', 2)
 
-# print(search_books(books,"Clean Code"))
+search_books(books_list,"Clean Code")
 
-search_books_all(books_list)
+# search_books_all(books_list)
 
 
