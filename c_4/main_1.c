@@ -17,6 +17,6 @@ int main(){
     for (int i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
     }
-    printf("%d", findMax(arr,n-1,arr[n-1]));
+    printf("max value is : %d", findMax(arr,n-1,arr[n-1]));
     return 0;
 }
